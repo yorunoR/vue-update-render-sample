@@ -1,20 +1,16 @@
 <template>
   <div>
-    <p>Pages</p>
-    <div>
+    <p>目次</p>
+    <p>Functional componentとの比較：
+      <router-link to="/normal-btns">NormalBtns</router-link> |
       <router-link to="/functional-component-btns"
         >FunctionalComponentBtns</router-link
       >
-    </div>
-    <div>
-      <router-link to="/normal-btns">NormalBtns</router-link>
-    </div>
-    <div>
-      <router-link to="/string-prop-btns">StringPropBtns</router-link>
-    </div>
-    <div>
-      <router-link to="/object-prop-btns">ObjectPropBtns</router-link>
-    </div>
+    </p>
+    <p>Object propとの比較：
+        <router-link to="/string-prop-btns">StringPropBtns</router-link> |
+        <router-link to="/object-prop-btns">ObjectPropBtns</router-link>
+    </p>
   </div>
 </template>
 

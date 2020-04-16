@@ -1,14 +1,21 @@
 <template>
   <div>
     <div>
-      <p>Reactive Same Component</p>
-      <router-link to="/">Homeにもどる</router-link>
-      <button @click="changeProperty">ディープ変更</button>
-      <button @click="changeObject">参照変更</button>
+      <p>String Prop Btns</p>
+      <p><router-link to="/">目次にもどる</router-link></p>
+      <p>
+        <button @click="changeProperty">ディープ変更</button> |
+        <button @click="changeObject">参照変更</button>
+      </p>
+      <p>
+        オブジェクト：{{ obj }}
+      </p>
     </div>
-    <normal-btn :name="aObject.name" color="white" />
-    <normal-btn :name="bObject.name" color="white" />
-    <normal-btn :name="cObject.name" color="white" />
+    <normal-btn :label="aObject.label" color="white" v-for="i in list" :key="`a-${i}`" />
+    <hr />
+    <normal-btn :label="bObject.label" color="white" v-for="i in list" :key="`b-${i}`" />
+    <hr />
+    <normal-btn :label="cObject.label" color="white" v-for="i in list" :key="`c-${i}`" />
   </div>
 </template>
 
@@ -21,21 +28,20 @@ export default {
   },
   data() {
     return {
+      list: [...Array(100).keys()],
       obj: { a: { deep1: { deep2: 1 } }, b: 2, c: 3 }
     };
   },
   computed: {
     aObject() {
-      console.log("a computed");
-      return { name: this.obj.a.deep1.deep2.toString() };
+      return { label: this.obj.a.deep1.deep2.toString() };
     },
     bObject() {
-      console.log("b computed");
-      return { name: this.obj.b.toString() };
+      return { label: this.obj.b.toString() };
     },
     cObject() {
-      console.log("c computed");
-      return { name: this.obj.c.toString() };
+      console.log("computed");
+      return { label: this.obj.c.toString() };
     }
   },
   methods: {

@@ -1,13 +1,13 @@
 <template functional>
   <button class="btn" :style="$options.styles(props)">
-    {{ props.name }}
+    {{ props.label }}
   </button>
 </template>
 
 <script>
 export default {
   props: {
-    name: String,
+    label: String,
     color: String
   },
   styles(props) {

@@ -1,13 +1,13 @@
 <template>
   <div>
     <div>
-      <p>Normal Btn</p>
-      <router-link to="/">Homeにもどる</router-link> |
-      <button @click="toggle">表示切り替え</button>
+      <p>Normal Btns</p>
+      <p><router-link to="/">目次にもどる</router-link></p>
+      <p><button @click="toggle">表示切り替え</button></p>
     </div>
     <div v-if="isShow">
-      <template v-for="i in lists">
-        <normal-btn :key="i" :name="i.toString()" color="white" />
+      <template v-for="i in list">
+        <normal-btn :key="i" :label="i.toString()" color="white" />
       </template>
     </div>
   </div>
@@ -26,8 +26,8 @@ export default {
     };
   },
   computed: {
-    lists() {
-      return [...Array(10000).keys()];
+    list() {
+      return [...Array(1000).keys()];
     }
   },
   methods: {

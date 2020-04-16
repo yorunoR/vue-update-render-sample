@@ -1,6 +1,6 @@
 <template>
   <button class="btn" @click="click" :style="styles">
-    {{ object.name }}
+    {{ object.label }}
   </button>
 </template>
 

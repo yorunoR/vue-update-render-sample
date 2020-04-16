@@ -1,13 +1,13 @@
 <template>
   <button class="btn" @click="click" :style="styles">
-    {{ name }}
+    {{ label }}
   </button>
 </template>
 
 <script>
 export default {
   props: {
-    name: String,
+    label: String,
     color: String
   },
   computed: {
