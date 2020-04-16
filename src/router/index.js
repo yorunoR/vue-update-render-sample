@@ -3,8 +3,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import FunctionalComponentBtns from "../views/FunctionalComponentBtns.vue";
 import NormalBtns from "../views/NormalBtns.vue";
-import ReactiveSameComponent from "../views/ReactiveSameComponent.vue";
-import ReactiveDiffComponent from "../views/ReactiveDiffComponent.vue";
+import StringPropBtns from "../views/StringPropBtns.vue";
+import ObjectPropBtns from "../views/ObjectPropBtns.vue";
 
 Vue.use(VueRouter);
 
@@ -20,14 +20,14 @@ const routes = [
     component: NormalBtns
   },
   {
-    path: "/reactive-same-component",
-    name: "ReactiveSameComponent",
-    component: ReactiveSameComponent
+    path: "/string-prop-btns",
+    name: "string-prop-btns",
+    component: StringPropBtns
   },
   {
-    path: "/reactive-diff-component",
-    name: "ReactiveDiffComponent",
-    component: ReactiveDiffComponent
+    path: "/object-prop-btns",
+    name: "object-prop-btns",
+    component: ObjectPropBtns
   },
   {
     path: "/",

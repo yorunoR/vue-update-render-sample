@@ -10,14 +10,10 @@
       <router-link to="/normal-btns">NormalBtns</router-link>
     </div>
     <div>
-      <router-link to="/reactive-same-component"
-        >ReactiveSameComponent</router-link
-      >
+      <router-link to="/string-prop-btns">StringPropBtns</router-link>
     </div>
     <div>
-      <router-link to="/reactive-diff-component"
-        >ReactiveDiffComponent</router-link
-      >
+      <router-link to="/object-prop-btns">ObjectPropBtns</router-link>
     </div>
   </div>
 </template>
