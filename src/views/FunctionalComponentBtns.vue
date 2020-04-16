@@ -7,33 +7,32 @@
     </div>
     <div v-if="isShow">
       <template v-for="i in lists">
-        <functional-component-btn :key="i" color="white" />
+        <functional-component-btn :key="i" :name="i.toString()" color="white" />
       </template>
     </div>
   </div>
 </template>
 
 <script>
-import FunctionalComponentBtn from '@/components/FunctionalComponentBtn'
+import FunctionalComponentBtn from "@/components/FunctionalComponentBtn";
 
 export default {
-  name: "Home",
   components: {
     FunctionalComponentBtn
   },
-  data () {
+  data() {
     return {
       isShow: false
-    }
+    };
   },
   computed: {
-    lists () {
-      return [...Array(10000).keys()]
+    lists() {
+      return [...Array(10000).keys()];
     }
   },
   methods: {
-    toggle () {
-      this.isShow = !this.isShow
+    toggle() {
+      this.isShow = !this.isShow;
     }
   }
 };

@@ -7,33 +7,32 @@
     </div>
     <div v-if="isShow">
       <template v-for="i in lists">
-        <normal-btn :key="i" color="white" />
+        <normal-btn :key="i" :name="i.toString()" color="white" />
       </template>
     </div>
   </div>
 </template>
 
 <script>
-import NormalBtn from '@/components/NormalBtn'
+import NormalBtn from "@/components/NormalBtn";
 
 export default {
-  name: "Home",
   components: {
     NormalBtn
   },
-  data () {
+  data() {
     return {
       isShow: false
-    }
+    };
   },
   computed: {
-    lists () {
-      return [...Array(10000).keys()]
+    lists() {
+      return [...Array(10000).keys()];
     }
   },
   methods: {
-    toggle () {
-      this.isShow = !this.isShow
+    toggle() {
+      this.isShow = !this.isShow;
     }
   }
 };
